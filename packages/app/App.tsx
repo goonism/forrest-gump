@@ -1,5 +1,6 @@
 import connect, { sql } from "@databases/expo"
 import Constants from "expo-constants"
+import { StatusBar } from "expo-status-bar"
 import * as React from "react"
 import { StyleSheet, Text, View } from "react-native"
 import { Button, Card, TextInput } from "react-native-paper"
@@ -23,8 +24,10 @@ function Items() {
   return (
     <View style={styles.sectionContainer}>
       <Text style={styles.sectionHeading}>"hello"</Text>
-      {items.map(({ description, food, bowel }) => (
-        <Text>{description + " " + food + " " + bowel}</Text>
+      {items.map(({ description, food, bowel }, i) => (
+        <Text key={description + "-" + i}>
+          {description + " " + food + " " + bowel}
+        </Text>
       ))}
     </View>
   )
@@ -39,7 +42,7 @@ export default function App() {
 
   React.useEffect(() => {
     db.tx(function* (transaction) {
-      transaction.query(
+      yield transaction.query(
         sql`create table if not exists dreams (id integer primary key not null, description text, food text, bowel int);`
       )
     })
@@ -61,6 +64,8 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <StatusBar style="dark" />
+
       <TextInput
         label="Dream Description"
         value={dreamText}
