@@ -1,70 +1,65 @@
-import * as vscode from "vscode";
+import * as vscode from "vscode"
 
-import { readJson, copy } from "fs-extra";
+import { readJson, copy } from "fs-extra"
 
-import { workspace, window } from "vscode";
-import { getFeatureName, getFeaturePaths } from "../utils";
-
-
+import { workspace, window } from "vscode"
+import { getFeatureName, getFeaturePaths } from "../utils"
 
 export default (): vscode.Disposable =>
   vscode.commands.registerCommand("ronda.newFeature", async () => {
-      // console.log = vscode.window.showInformationMessage
-      vscode.window.showInformationMessage(`Success ! ! ! 🎉`);
-      const featureName = await getFeatureName();
-      console.log('Feature name: ', featureName);
-      const paths = await getFeaturePaths(featureName, 'ahhhhh');
-      console.log(paths);
+    // console.log = vscode.window.showInformationMessage
+    vscode.window.showInformationMessage(`Success ! ! ! 🎉`)
+    const featureName = await getFeatureName()
+    console.log("Feature name: ", featureName)
 
-
+    const paths = await getFeaturePaths(featureName, "ahhhhh")
+    console.log(paths)
 
     // try {
-      // //#region Initialize
+    // //#region Initialize
 
-      // const config = workspace.getConfiguration();
+    // const config = workspace.getConfiguration();
 
-      // const { namespace, templateModule } = config;
+    // const { namespace, templateModule } = config;
 
-      // const workingPaths = await getWorkingPaths(config);
+    // const workingPaths = await getWorkingPaths(config);
 
-      // const [, pluginFilePath, sourcePath, templateModulePath] = workingPaths;
+    // const [, pluginFilePath, sourcePath, templateModulePath] = workingPaths;
 
-      // const [newFeatureName, newModuleSourcePath] = await inputModuleName(
-      //   namespace,
-      //   sourcePath
-      // );
+    // const [newFeatureName, newModuleSourcePath] = await inputModuleName(
+    //   namespace,
+    //   sourcePath
+    // );
 
-      // //#endregion
+    // //#endregion
 
-      // //#region Generating
-      // vscode.window.showWarningMessage(`Generating ${newFeatureName} . . . 🎁`);
+    // //#region Generating
+    // vscode.window.showWarningMessage(`Generating ${newFeatureName} . . . 🎁`);
 
-      // const pluginFileJSON = await readJson(pluginFilePath);
+    // const pluginFileJSON = await readJson(pluginFilePath);
 
-      // const pluginModules = pluginFileJSON.Modules;
+    // const pluginModules = pluginFileJSON.Modules;
 
-      // //#region Checking plugin entry
+    // //#region Checking plugin entry
 
-      // checkModuleExist(pluginModules, newFeatureName);
+    // checkModuleExist(pluginModules, newFeatureName);
 
-      // //#endregion
+    // //#endregion
 
-      // const newModuleEntry = getModuleEntry(newFeatureName);
-      // pluginFileJSON.Modules.push(newModuleEntry);
+    // const newModuleEntry = getModuleEntry(newFeatureName);
+    // pluginFileJSON.Modules.push(newModuleEntry);
 
-      // await prepareModule(copy, pluginFilePath, pluginFileJSON, [
-      //   templateModulePath,
-      //   newModuleSourcePath,
-      // ]);
+    // await prepareModule(copy, pluginFilePath, pluginFileJSON, [
+    //   templateModulePath,
+    //   newModuleSourcePath,
+    // ]);
 
-      // await createModule(templateModule, newFeatureName, newModuleSourcePath);
+    // await createModule(templateModule, newFeatureName, newModuleSourcePath);
 
-      // //#endregion
+    // //#endregion
 
-      // //#endregion
+    // //#endregion
     // } catch (error) {
-      // vscode.window.showErrorMessage(error.message);
+    // vscode.window.showErrorMessage(error.message);
     // }
-  });
-
-
+  })
