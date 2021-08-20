@@ -34,11 +34,11 @@ export async function getFeatureName() {
   if (!rawFeatureName) {
     throw Error(`A name is required dummy. . . 👻`);
   }
-  return kebab(rawFeatureName)
+  return kebab(rawFeatureName);
 }
 
 export async function getFeaturePaths(featureName: string, sourcePath: string, 
-  featureDirectories = ['components', 'hooks', 'utils']
+  featureDirectories = <const> ['components', 'hooks', 'utils']
   ) {
 
   const rootFeature = `${sourcePath}/feature` 

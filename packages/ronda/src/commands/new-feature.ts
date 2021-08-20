@@ -10,7 +10,6 @@ import { getFeatureName, getFeaturePaths } from "../utils";
 export default (): vscode.Disposable =>
   vscode.commands.registerCommand("ronda.newFeature", async () => {
       // console.log = vscode.window.showInformationMessage
-      vscode.window.showInformationMessage(`Success ! ! ! 🎉`);
       const featureName = await getFeatureName();
       console.log('Feature name: ', featureName);
       const paths = await getFeaturePaths(featureName, 'ahhhhh');
