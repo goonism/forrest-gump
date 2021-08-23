@@ -16,5 +16,5 @@
     { "path": "./ronda/tsconfig.json" },
     { "path": "./app/tsconfig.json" }
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "**/*.js"]
 }

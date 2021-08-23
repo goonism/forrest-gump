@@ -26,7 +26,6 @@ module.exports = {
 
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/consistent-type-imports": 2,
-    "@emotion/jsx-import": "error",
     // This rule is not compatible with Next.js's <Link /> components
     "jsx-a11y/anchor-is-valid": "off"
   }

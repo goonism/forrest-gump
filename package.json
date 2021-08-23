@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
+    "@emotion/eslint-plugin": "^11.2.0",
     "@types/fs-extra": "^9.0.12",
     "@types/glob": "^7.1.4",
     "@types/mocha": "^9.0.0",
