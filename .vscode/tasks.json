@@ -8,10 +8,6 @@
       "script": "watch",
       "problemMatcher": "$tsc-watch",
       "isBackground": true,
-      "options": {
-        "cwd": "${workspaceFolder}/ronda"
-      },
-
       "presentation": {
         "reveal": "never"
       },
