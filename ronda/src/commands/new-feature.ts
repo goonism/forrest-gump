@@ -1,8 +1,4 @@
 import * as vscode from "vscode"
-
-import { readJson, copy } from "fs-extra"
-
-import { workspace, window } from "vscode"
 import { getFeatureName, getFeaturePaths } from "../utils"
 
 export default (): vscode.Disposable =>

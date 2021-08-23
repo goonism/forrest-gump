@@ -1,6 +1,7 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "typeRoots": ["../node_modules/@types"],
     "strict": false,
     "baseUrl": ".",
     "target": "es6",
