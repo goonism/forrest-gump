@@ -1,6 +1,13 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "clean": "lerna clean",
+    "bootstrap": "lerna bootstrap --hoist",
+    "prepare": "npm run bootstrap",
+    "dev": "cd app && npm run dev",
+    "version": "lerna version --no-git-tag-version --no-push"
+  },
   "dependencies": {
     "case": "^1.6.3",
     "change-case": "^4.1.2",
