@@ -1,5 +1,4 @@
-import { kebab, camel } from "case"
-
+import { paramCase } from "change-case"
 import { workspace, window } from "vscode"
 
 import { move, pathExists, writeJson } from "fs-extra"
@@ -33,38 +32,10 @@ export async function getFeatureName() {
   if (!rawFeatureName) {
     throw Error(`A name is required dummy. . . 👻`)
   }
-  return kebab(rawFeatureName);
+  return paramCase(rawFeatureName)
 }
 
-<<<<<<< HEAD
-export async function getFeaturePaths(featureName: string, sourcePath: string, 
-  featureDirectories = <const> ['components', 'hooks', 'utils']
-  ) {
-
-  const rootFeature = `${sourcePath}/feature` 
-  const featurePath = `${rootFeature}/${featureName}`;
-
-  return featureDirectories.reduce((acc, c)=> {
-    acc[c] = `${featurePath}/${c}`;
-    return acc;
-  }, {} as {
-    [key in string]: string
-  });
-
-
-// export function getModuleIndex(
-//   pluginModules: Array<ModuleEntry>,
-//   srcModuleName: string
-// ) {
-//   const index = pluginModules.findIndex(({ Name }) => Name === srcModuleName);
-
-//   if (index === -1) {
-//     throw Error(`${srcModuleName} does not exist in uplugin ! ! ! 💩`);
-//   }
-
-//   return index;
-=======
-export async function getFeaturePaths<T = string>(
+export async function getFeaturePaths(
   featureName: string,
   sourcePath: string,
   featureDirectories = ["components", "hooks", "utils"]
@@ -92,7 +63,6 @@ export async function getFeaturePaths<T = string>(
   //   }
 
   //   return index;
->>>>>>> 3733f3a333639d50a543d33d40fd80255961658f
 }
 
 // export function checkModuleExist(

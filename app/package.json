@@ -1,0 +1,27 @@
+{
+  "name": "@forrest-gump/app",
+  "private": true,
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "dev": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "@babel/core": "7.0.0",
+    "@databases/expo": "^5.0.0",
+    "@emotion/native": "*",
+    "@emotion/react": "*",
+    "expo": "~42.0.3",
+    "expo-constants": "~11.0.1",
+    "expo-sqlite": "~9.2.1",
+    "expo-status-bar": "~1.0.4",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
+    "react-native-paper": "4.9.2",
+    "react-native-web": "~0.17.1"
+  }
+}
