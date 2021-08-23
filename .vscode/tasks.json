@@ -9,7 +9,7 @@
       "problemMatcher": "$tsc-watch",
       "isBackground": true,
       "options": {
-        "cwd": "${workspaceFolder}/packages/ronda"
+        "cwd": "${workspaceFolder}/ronda"
       },
 
       "presentation": {

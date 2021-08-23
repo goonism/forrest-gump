@@ -1,10 +1,5 @@
 import { paramCase } from "change-case"
-import { workspace, window } from "vscode"
-
-import { move, pathExists, writeJson } from "fs-extra"
-
-// import * as replace from "replace-in-file";
-import { access } from "fs"
+import { window, workspace } from "vscode"
 
 export function getConfiguration(): NujasGenConfig {
   return <any>workspace.getConfiguration("ronda")

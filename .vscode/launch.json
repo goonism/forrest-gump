@@ -9,8 +9,8 @@
       "name": "Run Ronda",
       "type": "extensionHost",
       "request": "launch",
-      "args": ["--extensionDevelopmentPath=${workspaceFolder}/packages/ronda"],
-      "outFiles": ["${workspaceFolder}/packages/ronda/out/**/*.js"],
+      "args": ["--extensionDevelopmentPath=${workspaceFolder}/ronda"],
+      "outFiles": ["${workspaceFolder}/ronda/out/**/*.js"],
       "preLaunchTask": "${defaultBuildTask}"
     },
     {
@@ -18,10 +18,10 @@
       "type": "extensionHost",
       "request": "launch",
       "args": [
-        "--extensionDevelopmentPath=${workspaceFolder}/packages/ronda",
-        "--extensionTestsPath=${workspaceFolder}/packages/ronda/out/test/suite/index"
+        "--extensionDevelopmentPath=${workspaceFolder}/ronda",
+        "--extensionTestsPath=${workspaceFolder}/ronda/out/test/suite/index"
       ],
-      "outFiles": ["${workspaceFolder}/packages/ronda/out/test/**/*.js"],
+      "outFiles": ["${workspaceFolder}/ronda/out/test/**/*.js"],
       "preLaunchTask": "${defaultBuildTask}"
     }
   ]
