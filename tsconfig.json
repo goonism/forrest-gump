@@ -13,5 +13,9 @@
     "esModuleInterop": true
   },
   "references": [{ "path": "./app/tsconfig.json" }],
-  "exclude": ["node_modules", "**/*.js"]
+  "exclude": ["node_modules", "**/*.js"],
+  "ts-node": {
+    "transpileOnly": true,
+    "transpiler": "ts-node/transpilers/swc-experimental"
+  }
 }

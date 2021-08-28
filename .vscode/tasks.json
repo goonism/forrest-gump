@@ -5,10 +5,10 @@
   "tasks": [
     {
       "label": "Run script",
-      "type": "process",
-      "command": "ts-node",
-      "args": ["scripts/${input:command}.ts", "--", "${input:commandArgs}"],
-      "problemMatcher": ["$tsc"]
+      "type": "shell",
+      "command": "node_modules/.bin/ts-node",
+      "args": ["scripts/${input:command}.ts"],
+      "problemMatcher": []
     }
   ],
   "inputs": [
@@ -16,12 +16,12 @@
       "id": "command",
       "type": "pickString",
       "description": "The command to run",
-      "options": ["new-feature"]
-    },
-    {
-      "id": "commandArgs",
-      "type": "promptString",
-      "description": "The arguments to pass to the command"
+      "options": [
+        {
+          "label": "New feature",
+          "value": "new-feature"
+        }
+      ]
     }
   ]
 }

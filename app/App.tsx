@@ -23,7 +23,7 @@ function Items() {
 
   return (
     <View style={styles.sectionContainer}>
-      <Text style={styles.sectionHeading}>"hello"</Text>
+      <Text style={styles.sectionHeading}>Hello</Text>
       {items.map(({ description, food, bowel }, i) => (
         <Text key={description + "-" + i}>
           {description + " " + food + " " + bowel}
