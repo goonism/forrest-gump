@@ -12,9 +12,6 @@
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true
   },
-  "references": [
-    { "path": "./ronda/tsconfig.json" },
-    { "path": "./app/tsconfig.json" }
-  ],
+  "references": [{ "path": "./app/tsconfig.json" }],
   "exclude": ["node_modules", "**/*.js"]
 }
